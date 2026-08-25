@@ -1,4 +1,5 @@
 window.PRICE_CHANGES=[
+ {setno:'43267',name:'Princess Castle & Royal Pets',retailer:'Target',type:'drop',oldPrice:97.99,newPrice:96.99,oldPct:25,newPct:25,when:'Aug. 25, 2026 • 10:04 AM PT',newSale:false,newLow:true,retailerChanged:false,note:'Verified Target price dropped another $1.00 and set a new stored low. Discount remains 25% when measured against the $129.99 U.S. RRP.'},
  {setno:'76785',name:"Thing's Apartment",retailer:'LEGO',type:'drop',oldPrice:89.99,newPrice:53.99,oldPct:0,newPct:40,when:'Aug. 25, 2026 • 7:14 AM PT',newSale:false,newLow:false,retailerChanged:true,note:'New verified retailer winner. Previous tracker winner was not verified; comparison baseline is MSRP. LEGO marks the set Retiring Soon and available now.'},
  {setno:'21271',name:'The Trial Chamber',retailer:'LEGO',type:'drop',oldPrice:39.99,newPrice:23.99,oldPct:0,newPct:40,when:'Aug. 25, 2026 • 7:14 AM PT',newSale:false,newLow:false,retailerChanged:true,note:'New verified retailer winner. Previous tracker winner was not verified; comparison baseline is MSRP. LEGO marks the set Retiring Soon; currently backordered.'},
  {setno:'76448',name:"Fawkes: Dumbledore's Phoenix",retailer:'LEGO',type:'drop',oldPrice:22.99,newPrice:16.09,oldPct:0,newPct:30,when:'Aug. 25, 2026 • 7:14 AM PT',newSale:false,newLow:false,retailerChanged:true,note:'New verified retailer winner. Previous tracker winner was not verified; comparison baseline is MSRP. LEGO marks the set Retiring Soon and available now.'},
@@ -16,16 +17,17 @@ window.PRICE_CHANGES=[
  const norm=s=>String(s||'').replace(/\./g,'').replace(/\s+/g,' ').trim();
  const today=norm(new Date().toLocaleDateString('en-US',{timeZone:'America/Los_Angeles',month:'short',day:'numeric',year:'numeric'}));
  const isToday=x=>norm(String(x.when||'').split('•')[0])===today;
+ const whenKey=x=>{const raw=String(x.when||'').replace('•',' ').replace(/\s+PT\s*$/,'').trim();const n=Date.parse(raw);return Number.isFinite(n)?n:0};
  const todays=rows.filter(isToday);
  const drops=todays.filter(x=>x.type==='drop').length;
  const newSales=todays.filter(x=>x.newSale===true).length;
  const largest=todays.reduce((m,x)=>Math.max(m,(Number(x.newPct)||0)-(Number(x.oldPct)||0)),0);
- const latest=todays.length?todays.reduce((a,b)=>String(a.when).localeCompare(String(b.when))>=0?a:b).when:'No verified change today';
+ const latest=todays.length?todays.reduce((a,b)=>whenKey(a)>=whenKey(b)?a:b).when:'No verified change today';
  const pulse=document.getElementById('pricePulse');
  if(pulse){pulse.innerHTML=`<div class="pulse-head"><div><p class="eyebrow">TODAY’S PRICE PULSE</p><h2>Verified LEGO price changes</h2><p>Computed automatically from the stored verified change history.</p></div></div><div class="pulse-grid"><div class="pulse-stat good"><strong>${drops}</strong><span>price drops / better sales today</span></div><div class="pulse-stat good"><strong>${newSales}</strong><span>newly-on-sale sets today</span></div><div class="pulse-stat hot"><strong>+${largest} pts</strong><span>largest discount improvement today</span></div><div class="pulse-stat time"><strong>${esc(latest)}</strong><span>latest verified price check</span></div></div>`;}
  const host=document.getElementById('priceChanges'); if(!host)return;
  const rank=x=>isToday(x)?0:1;
- rows.sort((a,b)=>rank(a)-rank(b)||((b.newPct-b.oldPct)-(a.newPct-a.oldPct)));
+ rows.sort((a,b)=>rank(a)-rank(b)||whenKey(b)-whenKey(a)||((b.newPct-b.oldPct)-(a.newPct-a.oldPct)));
  const label=x=>x.type==='saleended'?'✕ SALE ENDED':x.retailerChanged?'⇄ RETAILER WINNER CHANGED':x.newSale?'★ NEW SALE':x.newLow?'🏆 NEW HISTORICAL LOW':x.type==='rise'?'↑ PRICE INCREASE':'↓ PRICE DROP / DEEPER DISCOUNT';
  const cls=x=>x.type==='saleended'?'saleended':x.retailerChanged?'retailer':x.newSale?'newsale':x.newLow?'newlow':x.type==='rise'?'up':'down';
  const allDrops=rows.filter(x=>x.type==='drop').length, rises=rows.filter(x=>x.type==='rise'||x.type==='saleended').length;
