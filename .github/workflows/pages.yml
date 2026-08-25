@@ -19,6 +19,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Validate catalog integrity
+        run: python validate.py
+      - name: Upload validation report
+        uses: actions/upload-artifact@v4
+        with:
+          name: catalog-validation
+          path: |
+            validation.json
+            catalog.json
       - name: Configure and enable Pages
         uses: actions/configure-pages@v5
         with:
