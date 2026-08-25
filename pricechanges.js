@@ -1,4 +1,5 @@
 window.PRICE_CHANGES=[
+ {setno:'76470',name:'Enchanted Flying Ford Anglia',retailer:'Target',type:'drop',oldPrice:67.99,newPrice:65.99,oldPct:15,newPct:18,when:'Aug. 25, 2026 • 12:13 PM PT',newSale:false,newLow:false,retailerChanged:false,note:'Target price dropped $2.00 and returned to the previously verified historical low of $65.99. Brickset and Brick Fanatics continue to show a Dec. 31, 2026 retirement target.'},
  {setno:'21273',name:'The Ghast Balloon Village Attack',retailer:'Target',type:'drop',oldPrice:55.99,newPrice:44.79,oldPct:20,newPct:36,when:'Aug. 25, 2026 • 11:02 AM PT',newSale:false,newLow:false,retailerChanged:false,note:'Target sale deepened from 20% to 36% off and returned to the previously verified historical low of $44.79.'},
  {setno:'43267',name:'Princess Castle & Royal Pets',retailer:'Target',type:'drop',oldPrice:97.99,newPrice:96.99,oldPct:25,newPct:25,when:'Aug. 25, 2026 • 10:04 AM PT',newSale:false,newLow:true,retailerChanged:false,note:'Verified Target price dropped another $1.00 and set a new stored low. Discount remains 25% when measured against the $129.99 U.S. RRP.'},
  {setno:'76785',name:"Thing's Apartment",retailer:'LEGO',type:'drop',oldPrice:89.99,newPrice:53.99,oldPct:0,newPct:40,when:'Aug. 25, 2026 • 7:14 AM PT',newSale:false,newLow:false,retailerChanged:true,note:'New verified retailer winner. Previous tracker winner was not verified; comparison baseline is MSRP. LEGO marks the set Retiring Soon and available now.'},
@@ -10,7 +11,7 @@ window.PRICE_CHANGES=[
  {setno:'43270',name:"Moana's Adventure Canoe",retailer:'Target',type:'drop',oldPrice:43.49,newPrice:38.49,oldPct:28,newPct:36,when:'Aug. 25, 2026 • 7:05 AM PT',newSale:false,newLow:true,retailerChanged:false,note:'New verified low; discount deepened by 8 percentage points.'},
  {setno:'43260',name:"Moana's Island Fun",retailer:'Target',type:'drop',oldPrice:19.99,newPrice:14.99,oldPct:0,newPct:25,when:'Aug. 25, 2026 • 7:05 AM PT',newSale:true,newLow:true,retailerChanged:false,note:'New sale detected; current price matches the verified historical low.'},
  {setno:'21273',name:'The Ghast Balloon Village Attack',retailer:'Target',type:'rise',oldPrice:44.79,newPrice:55.99,oldPct:36,newPct:20,when:'Aug. 24, 2026',newSale:false,newLow:false,retailerChanged:false,note:'Discount became smaller; prior verified low remains $44.79.'},
- {setno:'76470',name:'Hogwarts Castle: The Main Tower',retailer:'Target',type:'rise',oldPrice:65.99,newPrice:67.99,oldPct:18,newPct:15,when:'Aug. 24, 2026',newSale:false,newLow:false,retailerChanged:false,note:'Price increased from the previous verified low.'}
+ {setno:'76470',name:'Enchanted Flying Ford Anglia',retailer:'Target',type:'rise',oldPrice:65.99,newPrice:67.99,oldPct:18,newPct:15,when:'Aug. 24, 2026',newSale:false,newLow:false,retailerChanged:false,note:'Price increased from the previous verified low.'}
 ];
 (function(){
  const rows=(window.PRICE_CHANGES||[]).slice();
