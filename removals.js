@@ -1,0 +1,1 @@
+window.DATA_REMOVALS=['40955']; // Maersk Dual-Fuel Container Vessel moved from Dec 2026 to Jul 2027 in the current retirement feed.
