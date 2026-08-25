@@ -19,7 +19,7 @@ const SOURCES=[
 {name:'BrickLink / PriceCharting',use:'Secondary-market depth and sales context only; never used as retail-price winners'}
 ];
 const DATE_LABELS={'2026-04-30':'April 30, 2026 — Retired','2026-07-31':'July 31, 2026 — Retired','2026-08-31':'August 31, 2026 — Next / Urgent','2026-12-31':'December 31, 2026 — Current tracker'};
-const NOW=new Date('2026-08-24T23:13:00-07:00');
+const NOW=new Date();
 let DATA=[],WATCH=new Set(JSON.parse(localStorage.getItem('legoWatchlist')||'[]'));
 const $=s=>document.querySelector(s), app=$('#app'),search=$('#search'),dateFilter=$('#dateFilter'),themeFilter=$('#themeFilter'),priorityFilter=$('#priorityFilter'),sortFilter=$('#sortFilter');
 
