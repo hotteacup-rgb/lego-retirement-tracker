@@ -1,0 +1,13 @@
+window.PRICE_CHANGES=[
+ {setno:'43270',name:"Moana's Adventure Canoe",retailer:'Target',type:'drop',oldPrice:43.49,newPrice:38.49,oldPct:28,newPct:36,when:'Aug. 25, 2026 • 7:05 AM PT',note:'New verified low; discount deepened by 8 percentage points.'},
+ {setno:'43260',name:"Moana's Island Fun",retailer:'Target',type:'drop',oldPrice:19.99,newPrice:14.99,oldPct:0,newPct:25,when:'Aug. 25, 2026 • 7:05 AM PT',note:'New sale detected; current price matches the verified historical low.'},
+ {setno:'21273',name:'The Ghast Balloon Village Attack',retailer:'Target',type:'rise',oldPrice:44.79,newPrice:55.99,oldPct:36,newPct:20,when:'Aug. 24, 2026',note:'Discount became smaller; prior verified low remains $44.79.'},
+ {setno:'76470',name:'Hogwarts Castle: The Main Tower',retailer:'Target',type:'rise',oldPrice:65.99,newPrice:67.99,oldPct:18,newPct:15,when:'Aug. 24, 2026',note:'Price increased from the previous verified low.'}
+];
+(function(){
+ const host=document.getElementById('priceChanges'); if(!host)return;
+ const esc=v=>String(v??'').replace(/[&<>\"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c]));
+ const rows=(window.PRICE_CHANGES||[]).slice().sort((a,b)=>{const ap=a.newPct-a.oldPct,bp=b.newPct-b.oldPct;return bp-ap});
+ const drops=rows.filter(x=>x.type==='drop').length, rises=rows.filter(x=>x.type==='rise').length;
+ host.innerHTML=`<div class="changefeed-head"><div><p class="eyebrow dark">PRICE MOVEMENT</p><h2>What changed since the last verified check</h2></div><div class="changefeed-stats"><b>${drops} drops / new sales</b><span>${rises} price increases</span></div></div><div class="changefeed-grid">${rows.map(x=>{const delta=x.newPrice-x.oldPrice,pctDelta=x.newPct-x.oldPct,good=x.type==='drop';return `<article class="price-change ${good?'down':'up'}"><div class="pc-top"><span>${good?'↓ PRICE DROP / BETTER SALE':'↑ PRICE INCREASE'}</span><b>${pctDelta>0?'+':''}${pctDelta} pts discount</b></div><h3>${esc(x.setno)} — ${esc(x.name)}</h3><p class="pc-price"><s>$${x.oldPrice.toFixed(2)}</s> → <strong>$${x.newPrice.toFixed(2)}</strong> at ${esc(x.retailer)}</p><p class="pc-discount">${x.oldPct}% off → <b>${x.newPct}% off</b> ${delta<0?`• save $${Math.abs(delta).toFixed(2)} more`:delta>0?`• costs $${delta.toFixed(2)} more`:''}</p><p class="pc-note">${esc(x.note)}</p><small>Verified ${esc(x.when)}</small></article>`}).join('')}</div><p class="changefeed-foot">This feed records verified changes between price checks. Marketplace offers that fail the Amazon/Walmart seller rules are not counted.</p>`;
+})();
