@@ -2,17 +2,23 @@
 
 Live site: https://hotteacup-rgb.github.io/lego-retirement-tracker/
 
-A visual U.S. tracker for LEGO sets currently expected to retire during 2026. The catalog is ordered by retirement timing and grouped by theme, with an image and decision card for every tracked set.
+A visual U.S. retirement-and-buying decision tracker for LEGO sets currently expected to retire during 2026. The default catalog remains ordered by retirement timing and grouped by theme, with an image and decision card for every tracked set.
 
-## What each card tracks
+## Decision features
 
-- Set number, name, theme and image
-- Current expected retirement date and confidence
-- LEGO U.S. MSRP
-- Cheapest currently verified qualifying retailer price
-- Historical verified low when available
-- Popularity and post-retirement appreciation potential
-- Retirement risk, target buy price and BUY / WATCH / WAIT guidance
+- Retirement month, target date and countdown
+- 0–100 Buy Priority Score
+- Separate price-quality, collector-demand, supply/sellout-risk and post-retirement-outlook scores
+- Best Deals, Buy Immediately, Retiring Next and Appreciation Candidate dashboard sections
+- Clearance + Retiring within 90 days view
+- Personal browser watchlist stored locally on the device
+- Sort by retirement, discount, buy score, popularity, appreciation outlook and current price
+- Mobile-first collapsed cards with the image, countdown, score and winning retailer price visible immediately
+- Historical low, current-vs-low gap and best verified discount
+- Retirement-date change warnings when a tracked date moves
+- Per-price last-checked display and stock-status field
+- Retirement evidence section that only reports exact source agreement when it has actually been stored
+- Winning-retailer shopping button; the card still shows only the cheapest qualifying verified retailer
 
 ## Retail-price rules
 
@@ -30,6 +36,10 @@ The tracker intentionally uses multiple independent sources rather than relying 
 
 LEGO's own U.S. store is weighted highest for official MSRP, availability and Retiring Soon / Last Chance status. Future retirement dates can change, so fan/community retirement calendars are cross-referenced and treated as current estimates rather than immutable official dates.
 
+## Scoring caveat
+
+Buy Priority and post-retirement outlook scores are decision aids built from retirement urgency, verified price quality, popularity and appreciation context. They are not guarantees of future resale value. The tracker deliberately labels missing retailer history, stock timestamps and per-set source agreement as unverified instead of fabricating data.
+
 ## Maintenance
 
-The site is split into maintainable HTML/CSS/JS files, compressed catalog chunks, metadata corrections and a separate verified-price patch layer. This allows retirement-date or retailer-price updates without rebuilding the whole catalog.
+The site is split into maintainable HTML/CSS/JS files, compressed catalog chunks, metadata corrections, retirement removals/change history and a separate verified-price patch layer. The deployment workflow validates the catalog before publishing.
