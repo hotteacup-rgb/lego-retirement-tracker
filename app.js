@@ -20,7 +20,7 @@ const SOURCES=[
 ];
 const DATE_LABELS={'2026-04-30':'April 30, 2026 — Retired','2026-07-31':'July 31, 2026 — Retired','2026-08-31':'August 31, 2026 — Next / Urgent','2026-12-31':'December 31, 2026 — Current tracker'};
 let DATA=[];const $=s=>document.querySelector(s);const app=$('#app');const search=$('#search'),dateFilter=$('#dateFilter'),themeFilter=$('#themeFilter'),priorityFilter=$('#priorityFilter');
-function saleVerified(x){return x.current&&/\$/.test(x.current)&&!/Full price/i.test(x.current)&&!/No verified/i.test(x.current)}
+function saleVerified(x){const m=String(x.current||'').match(/\((\d+(?:\.\d+)?)% off\)/i);return !!m&&Number(m[1])>0}
 function urgent(x){return x.risk==='RETIRED'||x.risk==='EXTREME'||x.risk==='HIGH'}
 function callClass(x){const c=(x.call||'').toLowerCase();if(/buy now|priority|buy near|buy at|buy ≤/.test(c)||x.risk==='EXTREME')return'urgent';if(/watch|good|buy around|buy on/.test(c))return'watch';return''}
 function imgFallback(img){if(!img.dataset.proxyTried){img.dataset.proxyTried='1';const original=img.dataset.original||img.src;img.dataset.original=original;img.src='https://images.weserv.nl/?url='+encodeURIComponent(original)+'&w=900&h=700&fit=contain&output=jpg';return}img.style.display='none';img.nextElementSibling.style.display='block'}
