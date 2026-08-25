@@ -10,14 +10,12 @@ parts=[p for _,p in sorted(parts)]
 rows=json.loads(gzip.decompress(base64.b64decode(''.join(parts))))
 
 patch_text=Path('patches.js').read_text()
-def extract_json(name, opener, closer):
-    start=patch_text.index(name)+len(name)
-    start=patch_text.index(opener,start)
-    depth=0
-    in_str=False
-    esc=False
-    for i in range(start,len(patch_text)):
-        c=patch_text[i]
+def extract_json(text,name,opener,closer):
+    start=text.index(name)+len(name)
+    start=text.index(opener,start)
+    depth=0; in_str=False; esc=False
+    for i in range(start,len(text)):
+        c=text[i]
         if in_str:
             if esc: esc=False
             elif c=='\\': esc=True
@@ -27,11 +25,11 @@ def extract_json(name, opener, closer):
         elif c==opener: depth+=1
         elif c==closer:
             depth-=1
-            if depth==0: return patch_text[start:i+1]
+            if depth==0: return text[start:i+1]
     raise ValueError(name)
 
-corrections=json.loads(extract_json('window.DATA_CORRECTIONS=', '{','}'))
-additions=json.loads(extract_json('window.DATA_ADDITIONS=', '[',']'))
+corrections=json.loads(extract_json(patch_text,'window.DATA_CORRECTIONS=', '{','}'))
+additions=json.loads(extract_json(patch_text,'window.DATA_ADDITIONS=', '[',']'))
 for r in rows:
     if str(r['setno']) in corrections:
         r.update(corrections[str(r['setno'])])
@@ -39,6 +37,11 @@ seen={str(r['setno']) for r in rows}
 for r in additions:
     if str(r['setno']) not in seen:
         rows.append(r); seen.add(str(r['setno']))
+
+if Path('removals.js').exists():
+    removal_text=Path('removals.js').read_text()
+    removals=set(map(str,json.loads(extract_json(removal_text,'window.DATA_REMOVALS=', '[',']').replace("'",'"'))))
+    rows=[r for r in rows if str(r.get('setno')) not in removals]
 
 rows.sort(key=lambda r:(r.get('date',''),r.get('theme',''),str(r.get('setno',''))))
 nums=[str(r.get('setno','')) for r in rows]
@@ -49,16 +52,7 @@ by_date={}
 for r in rows: by_date[r.get('date','UNKNOWN')]=by_date.get(r.get('date','UNKNOWN'),0)+1
 by_theme={}
 for r in rows: by_theme[r.get('theme','UNKNOWN')]=by_theme.get(r.get('theme','UNKNOWN'),0)+1
-report={
-  'set_count':len(rows),
-  'unique_set_numbers':len(set(nums)),
-  'duplicates':dupes,
-  'missing_images':missing_images,
-  'missing_dates':missing_dates,
-  'by_date':dict(sorted(by_date.items())),
-  'by_theme':dict(sorted(by_theme.items())),
-  'set_numbers':nums
-}
+report={'set_count':len(rows),'unique_set_numbers':len(set(nums)),'duplicates':dupes,'missing_images':missing_images,'missing_dates':missing_dates,'by_date':dict(sorted(by_date.items())),'by_theme':dict(sorted(by_theme.items())),'set_numbers':nums}
 Path('validation.json').write_text(json.dumps(report,indent=2))
 Path('catalog.json').write_text(json.dumps(rows,ensure_ascii=False,indent=2))
 print(json.dumps({k:v for k,v in report.items() if k!='set_numbers'},indent=2))
