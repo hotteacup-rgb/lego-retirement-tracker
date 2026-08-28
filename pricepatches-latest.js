@@ -3,5 +3,7 @@ Object.assign(window.DATA_PRICE_PATCHES,{
 "42678":{"current":"$15.99 — Target (20% off)","lowest":"$15.99 — Target (Aug 27, 2026)","checked":"Aug. 27, 2026 • 11:58 AM PT","stock":"Target: available; LEGO: $19.99 available now; Best Buy: $19.99 sold by Best Buy; Amazon: no featured offer"},
 "42695":{"current":"$19.19 — Target (36% off)","lowest":"$19.19 — Target (Aug 27, 2026)","checked":"Aug. 27, 2026 • 2:10 PM PT","stock":"Target: Sale; Add to cart. Best Buy: $20.99 sold by Best Buy; LEGO: $29.99 available now"},
 "42685":{"current":"$31.19 — Target (38% off)","lowest":"$31.19 — Target (Aug 27, 2026)","checked":"Aug. 27, 2026 • 2:10 PM PT","stock":"Target: Sale; Add to cart. Best Buy: $34.99 sold by Best Buy; LEGO/Macy's: $49.99"},
-"42661":{"current":"$25.99 — Target (35% off)","lowest":"$25.99 — Target (Aug 27, 2026)","checked":"Aug. 27, 2026 • 4:14 PM PT","stock":"Target: In Stock; Add to cart. LEGO: $39.99 available; Best Buy: $39.99 sold by Best Buy; Macy's: $39.99. Walmart visible offer is third-party and excluded."}
+"42661":{"current":"$25.99 — Target (35% off)","lowest":"$25.99 — Target (Aug 27, 2026)","checked":"Aug. 27, 2026 • 4:14 PM PT","stock":"Target: In Stock; Add to cart. LEGO: $39.99 available; Best Buy: $39.99 sold by Best Buy; Macy's: $39.99. Walmart visible offer is third-party and excluded."},
+"42644":{"current":"$18.49 — Target (8% off)","lowest":"$18.49 — Target (Aug 27, 2026)","checked":"Aug. 27, 2026 • 5:03 PM PT","stock":"Target: current direct listing at $18.49; LEGO/Best Buy regular price $19.99 where available"},
+"42650":{"current":"$31.99 — Target (20% off)","lowest":"$31.99 — Target (Aug 27, 2026)","checked":"Aug. 27, 2026 • 5:03 PM PT","stock":"Target: In Stock; Add to cart. Best Buy: $39.99 sold by Best Buy"}
 });
