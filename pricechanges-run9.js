@@ -1,0 +1,27 @@
+(function(){
+ const additions=[
+  {setno:'42654',name:'Pony Ranch & Stable',retailer:'Target',type:'drop',oldPrice:69.99,newPrice:65.99,oldPct:0,newPct:6,when:'Aug. 27, 2026 • 9:56 PM PT',day:'2026-08-27',minute:1316,newSale:true,newLow:true,retailerChanged:true,note:'New verified Target winner at $65.99 versus the $69.99 U.S. RRP. Target shows In Stock and Add to cart; Best Buy is $69.99 sold by Best Buy. Brickset records a Jul. 31, 2026 exit and current Brick Fanatics tracking still places 42654 in the Jul. 31, 2026 retirement cohort.'},
+  {setno:'42648',name:'Panda Sanctuary Animal Care',retailer:'Target',type:'drop',oldPrice:29.99,newPrice:23.99,oldPct:0,newPct:20,when:'Aug. 27, 2026 • 9:56 PM PT',day:'2026-08-27',minute:1316,newSale:true,newLow:true,retailerChanged:true,note:'New verified Target winner at $23.99, 20% below the $29.99 LEGO U.S. price. Target shows In Stock and Add to cart; LEGO is $29.99 and available now. Brickset records a Dec. 31, 2026 exit and current Brick Fanatics tracking also keeps 42648 in the December 2026 Friends cohort.'},
+  {setno:'42664',name:'Travel Boat Adventure',retailer:'Target',type:'drop',oldPrice:74.99,newPrice:59.99,oldPct:0,newPct:20,when:'Aug. 27, 2026 • 9:56 PM PT',day:'2026-08-27',minute:1316,newSale:true,newLow:true,retailerChanged:true,note:'New verified Target winner at $59.99 versus the $74.99 U.S. RRP used by current retirement tracking, a 20% discount. Target shows In Stock and Add to cart; Best Buy also lists $59.99. Current Brick Fanatics and Brick Ranker retirement data place 42664 in the December 2026 cohort.'}
+ ];
+ const old=window.PRICE_CHANGES||[];
+ const keys=new Set(additions.map(x=>`${x.setno}|${x.when}|${x.type}`));
+ window.PRICE_CHANGES=additions.concat(old.filter(x=>!keys.has(`${x.setno}|${x.when}|${x.type}`)));
+ const esc=v=>String(v??'').replace(/[&<>\"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c]));
+ const rows=window.PRICE_CHANGES.slice().sort((a,b)=>(b.day||'').localeCompare(a.day||'')||((b.minute||0)-(a.minute||0)));
+ const parts=new Intl.DateTimeFormat('en-US',{timeZone:'America/Los_Angeles',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());
+ const get=t=>parts.find(p=>p.type===t)?.value||'';
+ const todayKey=`${get('year')}-${get('month')}-${get('day')}`;
+ const today=rows.filter(x=>x.day===todayKey);
+ const drops=today.filter(x=>x.type==='drop').length;
+ const newSales=today.filter(x=>x.newSale).length;
+ const largest=today.reduce((m,x)=>Math.max(m,(x.newPct||0)-(x.oldPct||0)),0);
+ const latest=today.slice().sort((a,b)=>(b.minute||0)-(a.minute||0))[0];
+ const pulse=document.getElementById('pricePulse');
+ if(pulse){pulse.innerHTML=`<div class="changefeed-head"><div><p class="eyebrow dark">TODAY'S PRICE PULSE</p><h2>Verified LEGO price movement</h2></div><div class="changefeed-stats"><b>${drops} price drops / better sales</b><span>${newSales} newly-on-sale sets</span></div></div><div class="scoregrid"><div><span>Price drops / better sales</span><b>${drops}</b></div><div><span>Newly on sale</span><b>${newSales}</b></div><div><span>Largest discount improvement</span><b>+${largest} pts</b></div><div><span>Latest verified check</span><b>${latest?esc(latest.when.replace(/^.*•\s*/,'')):'No check today'}</b></div></div>`;}
+ const host=document.getElementById('priceChanges');
+ if(host){
+  const badge=x=>{const b=[];if(x.newSale)b.push('<span class="pill green">NEW SALE</span>');if(x.newLow)b.push('<span class="pill blue">NEW LOW</span>');if(x.type==='drop'&&!x.newSale)b.push('<span class="pill green">DEEPER / RETURNED SALE</span>');if(x.type==='rise')b.push('<span class="pill red">PRICE INCREASE</span>');if(x.type==='saleended')b.push('<span class="pill red">SALE ENDED</span>');if(x.retailerChanged)b.push('<span class="pill amber">RETAILER CHANGED</span>');return b.join(' ')};
+  host.innerHTML=`<div class="changefeed-head"><div><p class="eyebrow dark">PRICE MOVEMENT</p><h2>Latest verified changes</h2></div><div class="changefeed-stats"><b>${drops} drops / better sales today</b><span>${today.filter(x=>x.type==='rise'||x.type==='saleended').length} increases / sale endings today</span></div></div><div class="changefeed-grid">${rows.slice(0,40).map(x=>{const delta=(x.newPrice||0)-(x.oldPrice||0),pd=(x.newPct||0)-(x.oldPct||0);return `<article class="price-change ${x.type==='drop'?'down':'up'}"><div class="pc-top"><span>${esc(x.day===todayKey?'TODAY':'RECENT')}</span><b>${pd>0?'+':''}${pd} pts discount</b></div><div style="display:flex;gap:5px;flex-wrap:wrap;margin-top:7px">${badge(x)}</div><h3>${esc(x.setno)} — ${esc(x.name)}</h3><p class="pc-price"><s>$${Number(x.oldPrice).toFixed(2)}</s> → <strong>$${Number(x.newPrice).toFixed(2)}</strong> at ${esc(x.retailer)}</p><p class="pc-discount">${x.oldPct}% off → <b>${x.newPct}% off</b>${delta<0?` • save $${Math.abs(delta).toFixed(2)} more`:delta>0?` • costs $${delta.toFixed(2)} more`:''}</p><p class="pc-note">${esc(x.note)}</p><small>Verified ${esc(x.when)}</small></article>`}).join('')}</div><p class="changefeed-foot">Verified U.S. retailer changes only. Amazon counts only when sold and shipped by Amazon; Walmart counts only when sold and shipped by Walmart. Third-party marketplace offers are excluded.</p>`;
+ }
+})();
