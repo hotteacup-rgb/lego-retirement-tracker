@@ -1,5 +1,6 @@
 window.DATA_PRICE_PATCHES=window.DATA_PRICE_PATCHES||{};
 Object.assign(window.DATA_PRICE_PATCHES,{
+"42666":{"current":"$26.49 — Target (12% off)","lowest":"$26.49 — Target (Aug 28, 2026)","checked":"Aug. 28, 2026 • 12:57 AM PT","stock":"Target: In Stock; Add to cart. LEGO: $29.99 available now; Best Buy: $29.99. Walmart shows $26.00 but seller/shipping qualification was not established, so it is excluded."},
 "42678":{"current":"$15.99 — Target (20% off)","lowest":"$15.99 — Target (Aug 27, 2026)","checked":"Aug. 27, 2026 • 11:58 AM PT","stock":"Target: available; LEGO: $19.99 available now; Best Buy: $19.99 sold by Best Buy; Amazon: no featured offer"},
 "42695":{"current":"$19.19 — Target (36% off)","lowest":"$19.19 — Target (Aug 27, 2026)","checked":"Aug. 27, 2026 • 11:16 PM PT","stock":"Target: $19.19 sale with Add to cart. Best Buy: $20.99 sold by Best Buy; Target is again the cheapest verified qualifying retailer. Historical low matched."},
 "42685":{"current":"$31.19 — Target (38% off)","lowest":"$31.19 — Target (Aug 27, 2026)","checked":"Aug. 27, 2026 • 11:16 PM PT","stock":"Target: $31.19 sale with Add to cart. Best Buy: $34.99 sold by Best Buy; Target is again the cheapest verified qualifying retailer. Historical low matched."},
