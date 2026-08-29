@@ -107,7 +107,7 @@ function renderDashboard(rows){
  const invest=[...future].sort((a,b)=>investmentScore(b)-investmentScore(a)).slice(0,4);
  const clearance=[...future].filter(x=>daysLeft(x)<=90&&discountPct(x)>=20).sort((a,b)=>buyScore(b)-buyScore(a)).slice(0,6);
  const watched=rows.filter(x=>WATCH.has(String(x.setno))).slice(0,8);
- const changes=window.RETIREMENT_CHANGES||[];
+ const changes=(window.RETIREMENT_CHANGES||[]).filter(c=>!window.EXCLUDED_SETNOS?.has(String(c.setno)));
  $('#dashboard').innerHTML=`<div class="dash-title"><div><p class="eyebrow dark">DECISION DASHBOARD</p><h2>What deserves attention first</h2></div><span>Scores are decision aids, not guaranteed investment returns.</span></div>
  <div class="dash-groups">
   <section><h3>🔥 Buy Immediately</h3>${buy.map(x=>dashboardCard(x,`${buyScore(x)}/100`)).join('')}</section>
@@ -157,9 +157,15 @@ function $dates(ds){return ds.map(d=>`<option value="${d}">${DATE_LABELS[d]||d}<
 function applyPatches(rows){
  const corrections=window.DATA_CORRECTIONS||{};rows=rows.map(x=>{const patch=corrections[x.setno];return patch?{...x,...patch}:x});
  const seen=new Set(rows.map(x=>x.setno));for(const x of (window.DATA_ADDITIONS||[])){if(!seen.has(x.setno)){rows.push(x);seen.add(x.setno)}}
+ window.TRACKER_THEME_BY_SETNO=Object.fromEntries(rows.map(x=>[String(x.setno),x.theme]));
+ window.EXCLUDED_SETNOS=new Set(rows.filter(x=>window.isThemeExcluded?.(x.theme)).map(x=>String(x.setno)));
+ const keptWatchlist=[...WATCH].filter(setno=>!window.EXCLUDED_SETNOS.has(String(setno)));
+ if(keptWatchlist.length!==WATCH.size){WATCH=new Set(keptWatchlist);localStorage.setItem('legoWatchlist',JSON.stringify(keptWatchlist))}
  const removed=new Set((window.DATA_REMOVALS||[]).map(String));rows=rows.filter(x=>!removed.has(String(x.setno)));
+ rows=rows.filter(x=>!window.shouldTrackSet||window.shouldTrackSet(x));
  const prices=window.DATA_PRICE_PATCHES||{};rows=rows.map(x=>prices[x.setno]?{...x,...prices[x.setno]}:x);
  const evidence=window.DATA_EVIDENCE_PATCHES||{};rows=rows.map(x=>evidence[x.setno]?{...x,...evidence[x.setno]}:x);
+ window.TRACKED_SETNOS=new Set(rows.map(x=>String(x.setno)));
  return rows.sort((a,b)=>a.date.localeCompare(b.date)||a.theme.localeCompare(b.theme)||String(a.setno).localeCompare(String(b.setno),undefined,{numeric:true}))
 }
-(async()=>{try{const raw=Uint8Array.from(atob((window.DATA_PARTS||[]).join('')),c=>c.charCodeAt(0));const ds=new DecompressionStream('gzip');const txt=await new Response(new Blob([raw]).stream().pipeThrough(ds)).text();DATA=applyPatches(JSON.parse(txt));setup()}catch(e){app.innerHTML=`<div class="empty"><b>Could not load tracker data.</b><br>${escapeHtml(e.message)}</div>`}})();
+(async()=>{try{const raw=Uint8Array.from(atob((window.DATA_PARTS||[]).join('')),c=>c.charCodeAt(0));const ds=new DecompressionStream('gzip');const txt=await new Response(new Blob([raw]).stream().pipeThrough(ds)).text();DATA=applyPatches(JSON.parse(txt));window.TRACKER_DATA=DATA;setup();window.dispatchEvent(new CustomEvent('tracker:dataready',{detail:{setCount:DATA.length}}))}catch(e){app.innerHTML=`<div class="empty"><b>Could not load tracker data.</b><br>${escapeHtml(e.message)}</div>`}})();
