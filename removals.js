@@ -1,4 +1,4 @@
-window.DATA_REMOVALS=['40955','21276','31163','42687','42219','42212','42202'];
+window.DATA_REMOVALS=['40955','21276','31163','42687','42219','42212','42202','75405'];
 window.RETIREMENT_CHANGES=[
   {setno:'42202',name:'Ducati Panigale V4 S Motorcycle',from:'December 2026',to:'July 2027',note:'Removed from the 2026 tracker after fresher retirement evidence moved it beyond 2026. Brick Ranker currently lists July 2027 and BrickEconomy projects mid-2027. StoneWars\' February 2026 tracker still listed it for 2026, but explicitly warned that its early-year dates were likely to change; the tracker follows the newer two-source 2027 consensus.'},
   {setno:'42212',name:'Ferrari FXX K',from:'December 2026',to:'December 2027–December 2028 (source conflict)',note:'Removed from the 2026 tracker after fresher retirement evidence moved it beyond 2026. Brick Ranker and BrickEconomy currently place it in 2027, while Brick Fanatics\' current table lists Dec. 31, 2028. The exact later year remains disputed, but the sources agree it is no longer a 2026 retirement.'},
