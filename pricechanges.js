@@ -1,5 +1,24 @@
 window.PRICE_CHANGES=[
 {
+  "setno": "76437",
+  "name": "The Burrow – Collectors' Edition",
+  "theme": "Harry Potter",
+  "oldPrice": 259.99,
+  "newPrice": 181.99,
+  "oldPct": 0,
+  "newPct": 30,
+  "newSale": true,
+  "newLow": true,
+  "retailerChanged": false,
+  "retailer": "Target",
+  "type": "drop",
+  "when": "Oct. 5, 2026 • 4:28 PM PT",
+  "day": "2026-10-05",
+  "minute": 988,
+  "note": "Target started a verified 30% sale at $181.99 versus LEGO's current $259.99 price, establishing the tracker's first verified price and historical low for 76437. Target showed Add to cart. LEGO marks the set Retiring soon; Brickset, Brick Fanatics and Jay's Brick Blog support Dec. 31, 2026 retirement."
+},
+
+{
   "setno": "75456",
   "name": "Star Wars Advent Calendar 2026",
   "theme": "Star Wars",
