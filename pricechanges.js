@@ -1,5 +1,24 @@
 window.PRICE_CHANGES=[
 {
+  "setno": "75456",
+  "name": "Star Wars Advent Calendar 2026",
+  "theme": "Star Wars",
+  "oldPrice": 35.49,
+  "newPrice": 35,
+  "oldPct": 21,
+  "newPct": 22,
+  "newSale": false,
+  "newLow": true,
+  "retailerChanged": true,
+  "retailer": "Walmart",
+  "type": "drop",
+  "when": "Oct. 4, 2026 • 11:17 PM PT",
+  "day": "2026-10-04",
+  "minute": 1397,
+  "note": "Walmart became the verified winner at $35.00, sold and shipped by Walmart.com, edging Target's stored $35.49 winner and establishing a new tracker low (22% off LEGO U.S. MSRP)."
+},
+
+{
   "setno": "42154",
   "name": "2022 Ford GT",
   "theme": "Technic",
