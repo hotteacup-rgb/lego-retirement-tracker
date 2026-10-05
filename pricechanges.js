@@ -1,5 +1,42 @@
 window.PRICE_CHANGES=[
 {
+  "setno": "42154",
+  "name": "2022 Ford GT",
+  "theme": "Technic",
+  "oldPrice": 95.99,
+  "newPrice": 67.19,
+  "oldPct": 20,
+  "newPct": 44,
+  "newSale": false,
+  "newLow": true,
+  "retailerChanged": false,
+  "retailer": "Target",
+  "type": "drop",
+  "when": "Oct. 4, 2026 • 10:31 PM PT",
+  "day": "2026-10-04",
+  "minute": 1351,
+  "note": "Target dropped 42154 from the previous stored winner of $95.99 to $67.19 in cart, improving the LEGO U.S. MSRP discount from 20% to 44%; shipping and nearby pickup were verified, establishing a new tracker low."
+},
+{
+  "setno": "75435",
+  "name": "Battle of Felucia Separatist MTT",
+  "theme": "Star Wars",
+  "oldPrice": 159.99,
+  "newPrice": 111.99,
+  "oldPct": 0,
+  "newPct": 30,
+  "newSale": true,
+  "newLow": true,
+  "retailerChanged": false,
+  "retailer": "Target",
+  "type": "drop",
+  "when": "Oct. 4, 2026 • 10:31 PM PT",
+  "day": "2026-10-04",
+  "minute": 1351,
+  "note": "Target's live U.S. sale listing establishes the first tracker-verified winning offer for 75435 at $111.99 (30% off LEGO U.S. MSRP); Add to cart was verified and fulfillment varies by ZIP."
+},
+
+{
   "setno": "10309",
   "name": "Succulents",
   "theme": "Botanicals",
