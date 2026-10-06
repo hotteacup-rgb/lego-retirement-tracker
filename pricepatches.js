@@ -137,6 +137,6 @@ Object.assign(window.DATA_PRICE_PATCHES,{
 "21058":{"current":"$90.99 — Amazon (30% off)","lowest":"$79.99 — Barnes & Noble / Kohl's (previous verified historical low)","checked":"Oct. 6, 2026 • 7:01 AM PT","stock":"Amazon: In Stock; sold by Amazon.com and shipped by Amazon"},
 "31208":{"current":"$69.99 — Amazon (30% off)","lowest":"$69.99 — Amazon (Oct. 6, 2026)","checked":"Oct. 6, 2026 • 7:01 AM PT","stock":"Amazon: In Stock; sold by Amazon.com and shipped by Amazon"},
 "43277":{"current":"$34.99 — Amazon (30% off)","lowest":"$34.99 — Amazon (Oct. 6, 2026; first tracker-verified price and historical low)","checked":"Oct. 6, 2026 • 7:01 AM PT","stock":"Amazon: In Stock; sold by Amazon.com and shipped by Amazon"},
-"72042":{"current":"$69.99 — Amazon (30% off)","lowest":"$69.99 — Amazon (Oct. 6, 2026; first tracker-verified price and historical low)","checked":"Oct. 6, 2026 • 7:01 AM PT","stock":"Amazon: In Stock; sold by Amazon.com and shipped by Amazon"},
+"72042":{"current":"$69.99 — Amazon / LEGO (30% off)","lowest":"$69.99 — Amazon / LEGO (Oct. 6, 2026; first tracker-verified price and historical low)","checked":"Oct. 6, 2026 • 7:01 AM PT","stock":"Amazon: In Stock; sold by Amazon.com and shipped by Amazon. LEGO U.S.: $69.99 (30% off)."},
 "75410":{"current":"$17.99 — Amazon (40% off)","lowest":"$17.99 — Amazon (Oct. 6, 2026)","checked":"Oct. 6, 2026 • 7:01 AM PT","stock":"Amazon: In Stock; sold by Amazon.com and shipped by Amazon"}
 });
