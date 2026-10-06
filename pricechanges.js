@@ -1,4 +1,5 @@
 window.PRICE_CHANGES=[
+ {setno:'43272',name:'Heihei',retailer:'Walmart',type:'drop',oldPrice:31.99,newPrice:25.00,oldPct:20,newPct:37,when:'Oct. 5, 2026 • 10:29 PM PT',day:'2026-10-05',minute:1349,newSale:false,newLow:true,retailerChanged:true,note:'Walmart dropped Heihei from the prior $31.99 Walmart/Target tie to $25.00, a new tracker-verified historical low. The product listing is sold and shipped by Walmart.com. Retirement remains Dec. 31, 2026.'},
  {setno:'42177',name:'Mercedes-Benz G 500 PROFESSIONAL Line',retailer:'Walmart',type:'drop',oldPrice:249.99,newPrice:198.00,oldPct:0,newPct:21,when:'Oct. 5, 2026 • 9:26 PM PT',day:'2026-10-05',minute:1286,newSale:true,newLow:true,retailerChanged:true,note:'First tracker-verified price: Walmart showed $198.00 with Add to cart and free shipping, sold and shipped by Walmart.com. Target\'s $174.99 listing was out of stock. Retirement remains Dec. 31, 2026.'},
 {
   "setno": "77259",
