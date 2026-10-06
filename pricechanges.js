@@ -1,5 +1,24 @@
 window.PRICE_CHANGES=[
 {
+  "setno": "76449",
+  "name": "Chomping Monster Book of Monsters",
+  "theme": "Harry Potter",
+  "oldPrice": 59.99,
+  "newPrice": 41.99,
+  "oldPct": 0,
+  "newPct": 30,
+  "newSale": true,
+  "newLow": true,
+  "retailerChanged": false,
+  "retailer": "Target",
+  "type": "drop",
+  "when": "Oct. 5, 2026 • 5:26 PM PT",
+  "day": "2026-10-05",
+  "minute": 1046,
+  "note": "Target started a verified 30% sale at $41.99 versus LEGO's current $59.99 price, establishing the tracker's first verified price and historical low for 76449. Target showed Add to cart. LEGO is $59.99, GameStop is $59.99 and Best Buy is sold out. Retirement remains Dec. 31, 2026, supported by Brick Fanatics, Brickset and Jay's Brick Blog."
+},
+
+{
   "setno": "76437",
   "name": "The Burrow – Collectors' Edition",
   "theme": "Harry Potter",
