@@ -1,5 +1,23 @@
 window.PRICE_CHANGES=[
 {
+  "setno": "77259",
+  "name": "Audi Revolut F1 Team R26 Race Car",
+  "theme": "Speed Champions",
+  "oldPrice": 21.99,
+  "newPrice": 15.39,
+  "oldPct": 21,
+  "newPct": 45,
+  "newSale": false,
+  "newLow": true,
+  "retailerChanged": false,
+  "retailer": "Target",
+  "type": "drop",
+  "when": "Oct. 5, 2026 • 6:14 PM PT",
+  "day": "2026-10-05",
+  "minute": 1094,
+  "note": "Target deepened its verified price from the stored $21.99 winner to $15.39, about 45% off LEGO U.S. $27.99 MSRP and a new tracker-verified historical low. Target shows Add to cart plus pickup, same-day delivery, and shipping availability. LEGO is $27.99; Best Buy was last verified at $27.99. Walmart's $26.79 listing is sold and shipped by third-party VIPOUTLET and is excluded. Retirement remains Dec. 31, 2026, supported by Brick Fanatics, BrickEconomy, Brickset, and StoneWars."
+},
+{
   "setno": "76449",
   "name": "Chomping Monster Book of Monsters",
   "theme": "Harry Potter",
