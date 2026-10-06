@@ -140,3 +140,5 @@ Object.assign(window.DATA_PRICE_PATCHES,{
 "72042":{"current":"$69.99 — Amazon / LEGO (30% off)","lowest":"$69.99 — Amazon / LEGO (Oct. 6, 2026; first tracker-verified price and historical low)","checked":"Oct. 6, 2026 • 7:01 AM PT","stock":"Amazon: In Stock; sold by Amazon.com and shipped by Amazon. LEGO U.S.: $69.99 (30% off)."},
 "75410":{"current":"$17.99 — Amazon (40% off)","lowest":"$17.99 — Amazon (Oct. 6, 2026)","checked":"Oct. 6, 2026 • 7:01 AM PT","stock":"Amazon: In Stock; sold by Amazon.com and shipped by Amazon"}
 });
+
+Object.assign(window.DATA_PRICE_PATCHES,{"40743":{"current":"$27.99 — LEGO (30% off)","lowest":"$27.99 — LEGO (Oct. 6, 2026; first tracker-verified price and historical low)","checked":"Oct. 6, 2026 • 7:42 AM PT","stock":"LEGO U.S.: Available now; Add to Bag"}});
