@@ -1,5 +1,23 @@
 window.PRICE_CHANGES=[
   {
+    "setno": "42205",
+    "name": "Chevrolet Corvette Stingray",
+    "theme": "Technic",
+    "retailer": "Amazon",
+    "type": "drop",
+    "oldPrice": 55.99,
+    "newPrice": 41.99,
+    "oldPct": 7,
+    "newPct": 30,
+    "when": "Oct. 11, 2026 • 4:12 PM PT",
+    "day": "2026-10-11",
+    "minute": 972,
+    "newSale": false,
+    "newLow": false,
+    "retailerChanged": true,
+    "note": "Amazon is now the verified winner at $41.99, In Stock, sold and shipped by Amazon.com on the direct product offer, with the same current price listed in today's Amazon deal feed. This replaces Target's $55.99 winner and improves the verified discount from 7% to 30% against LEGO U.S. MSRP. The $35.99 tracker-verified historical low is preserved. Retirement remains Dec. 31, 2026."
+  },
+  {
     "setno": "71514",
     "name": "Dino Jet",
     "theme": "DREAMZzz",
