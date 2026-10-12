@@ -1,5 +1,23 @@
 window.PRICE_CHANGES=[
   {
+    "setno": "42209",
+    "name": "Volvo L120 Electric Wheel Loader",
+    "theme": "Technic",
+    "retailer": "Macy's",
+    "type": "drop",
+    "oldPrice": 101.99,
+    "newPrice": 71.99,
+    "oldPct": 15,
+    "newPct": 40,
+    "when": "Oct. 11, 2026 • 6:34 PM PT",
+    "day": "2026-10-11",
+    "minute": 1114,
+    "newSale": false,
+    "newLow": false,
+    "retailerChanged": true,
+    "note": "Macy's is now the verified winner at $71.99 in a Limited-Time Special (was $119.99), with Add To Bag and Buy Now shown on the live U.S. product page. This replaces Target's $101.99 winner and improves the verified discount from 15% to 40% against LEGO U.S. MSRP. The $71.39 tracker-verified historical low is preserved. Retirement remains Dec. 31, 2026."
+  },
+  {
     "setno": "43298",
     "name": "Disney Princess Advent Calendar 2026",
     "theme": "Disney",
