@@ -1,5 +1,23 @@
 window.PRICE_CHANGES=[
   {
+    "setno": "42205",
+    "name": "Chevrolet Corvette Stingray",
+    "theme": "Technic",
+    "retailer": "Target",
+    "type": "saleended",
+    "oldPrice": 41.99,
+    "newPrice": 55.99,
+    "oldPct": 30,
+    "newPct": 7,
+    "when": "Oct. 12, 2026 • 2:20 AM PT",
+    "day": "2026-10-12",
+    "minute": 140,
+    "newSale": false,
+    "newLow": false,
+    "retailerChanged": true,
+    "note": "The $41.99 Amazon promotion ended. Target is now the verified winner at $55.99; Walmart's lower-looking $54.95 offer is a third-party marketplace listing and Best Buy is sold out. The $35.99 historical low is preserved."
+  },
+  {
     "setno": "42211",
     "name": "Lunar Outpost Moon Rover Space Vehicle",
     "theme": "Technic",
