@@ -1,5 +1,24 @@
 window.PRICE_CHANGES=[
   {
+    "setno": "21356",
+    "name": "River Steamboat",
+    "theme": "Ideas",
+    "retailer": "Target",
+    "type": "drop",
+    "oldPrice": 329.99,
+    "newPrice": 310.99,
+    "oldPct": 0,
+    "newPct": 6,
+    "when": "Oct. 12, 2026 • 3:17 PM PT",
+    "day": "2026-10-12",
+    "minute": 917,
+    "newSale": true,
+    "newLow": false,
+    "retailerChanged": true,
+    "note": "Target started a new $19-off sale at $310.99, replacing the $329.99 Target / LEGO co-winner and improving the verified discount from 0% to 6%. In Stock and Add to cart were verified; the $230.99 tracker-verified historical low is preserved. Retirement remains Dec. 31, 2026."
+  },
+
+  {
     "setno": "43264",
     "name": "Toy Story Celebration Train & RC Car",
     "theme": "Disney",
