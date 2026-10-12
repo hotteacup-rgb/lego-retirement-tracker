@@ -1,5 +1,24 @@
 window.PRICE_CHANGES=[
   {
+    "setno": "43267",
+    "name": "Princess Castle & Royal Pets",
+    "theme": "Disney",
+    "retailer": "Target",
+    "type": "drop",
+    "oldPrice": 103.99,
+    "newPrice": 89.99,
+    "oldPct": 20,
+    "newPct": 31,
+    "when": "Oct. 12, 2026 • 11:26 AM PT",
+    "day": "2026-10-12",
+    "minute": 686,
+    "newSale": false,
+    "newLow": false,
+    "retailerChanged": false,
+    "note": "Target dropped the set to $89.99 from $103.99, improving the verified discount from 20% to 31%. In Stock and Add to cart were verified; the $72.79 historical low is preserved. Retirement remains Dec. 31, 2026."
+  },
+
+  {
     "setno": "10353",
     "name": "Williams Racing FW14B & Nigel Mansell",
     "theme": "Icons",
