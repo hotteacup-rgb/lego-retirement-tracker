@@ -1,5 +1,24 @@
 window.PRICE_CHANGES=[
   {
+    "setno": "43264",
+    "name": "Toy Story Celebration Train & RC Car",
+    "theme": "Disney",
+    "retailer": "Target",
+    "type": "drop",
+    "oldPrice": 33.99,
+    "newPrice": 31.99,
+    "oldPct": 15,
+    "newPct": 20,
+    "when": "Oct. 12, 2026 • 2:29 PM PT",
+    "day": "2026-10-12",
+    "minute": 869,
+    "newSale": false,
+    "newLow": false,
+    "retailerChanged": true,
+    "note": "Target returned the set to $31.99 from $33.99, improving the verified discount from 15% to 20%. Add to cart and Sale Ends Monday were verified on today's Target listing; the price matches the Oct. 4 tracker-verified historical low. Target is now the sole reverified winner. Retirement remains Dec. 31, 2026."
+  },
+
+  {
     "setno": "43267",
     "name": "Princess Castle & Royal Pets",
     "theme": "Disney",
