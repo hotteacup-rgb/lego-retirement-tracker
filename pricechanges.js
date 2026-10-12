@@ -1,5 +1,23 @@
 window.PRICE_CHANGES=[
   {
+    "setno": "42211",
+    "name": "Lunar Outpost Moon Rover Space Vehicle",
+    "theme": "Technic",
+    "retailer": "Target",
+    "type": "rise",
+    "oldPrice": 79.99,
+    "newPrice": 87.99,
+    "oldPct": 20,
+    "newPct": 12,
+    "when": "Oct. 12, 2026 • 12:15 AM PT",
+    "day": "2026-10-12",
+    "minute": 15,
+    "newSale": false,
+    "newLow": false,
+    "retailerChanged": false,
+    "note": "Target's $79.99 promotion ended; its current listing is $87.99. Best Buy and Walmart marketplace offers were excluded. The $69.99 historical low is preserved, and the set remains retired as of Jul. 31, 2026."
+  },
+  {
     "setno": "42209",
     "name": "Volvo L120 Electric Wheel Loader",
     "theme": "Technic",
