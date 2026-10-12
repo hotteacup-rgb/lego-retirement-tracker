@@ -1,5 +1,23 @@
 window.PRICE_CHANGES=[
   {
+    "setno": "10353",
+    "name": "Williams Racing FW14B & Nigel Mansell",
+    "theme": "Icons",
+    "retailer": "Target / Macy's",
+    "type": "retailer",
+    "oldPrice": 47.99,
+    "newPrice": 47.99,
+    "oldPct": 40,
+    "newPct": 40,
+    "when": "Oct. 12, 2026 • 4:43 AM PT",
+    "day": "2026-10-12",
+    "minute": 283,
+    "newSale": false,
+    "newLow": false,
+    "retailerChanged": true,
+    "note": "Macy's joins Target as a qualifying retailer co-winner at $47.99 (40% off) via today's Limited-Time Special. The price and tracker-verified historical low are unchanged; retirement remains Dec. 31, 2026."
+  },
+  {
     "setno": "42205",
     "name": "Chevrolet Corvette Stingray",
     "theme": "Technic",
