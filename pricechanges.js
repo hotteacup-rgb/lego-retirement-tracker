@@ -1,5 +1,23 @@
 window.PRICE_CHANGES=[
   {
+    "setno": "42211",
+    "name": "Lunar Outpost Moon Rover",
+    "theme": "Technic",
+    "retailer": "Target",
+    "type": "drop",
+    "oldPrice": 87.99,
+    "newPrice": 79.99,
+    "oldPct": 12,
+    "newPct": 20,
+    "when": "Oct. 13, 2026 • 12:34 AM PT",
+    "day": "2026-10-13",
+    "minute": 34,
+    "newSale": false,
+    "newLow": false,
+    "retailerChanged": false,
+    "note": "Target returned the set to $79.99 from $87.99, improving the verified discount from 12% to 20%. In Stock and Add to cart were verified on the current U.S. product page. The $69.99 tracker-verified historical low is preserved. Retired Jul. 31, 2026; current availability is remaining retailer sell-through."
+  },
+  {
     "setno": "80118",
     "name": "Fortune Firecracker",
     "theme": "Seasonal",
