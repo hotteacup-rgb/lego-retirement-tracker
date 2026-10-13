@@ -1,5 +1,23 @@
 window.PRICE_CHANGES=[
   {
+    "setno": "76445",
+    "name": "Hogwarts Castle: Herbology Class",
+    "theme": "Harry Potter",
+    "retailer": "Scheels",
+    "type": "drop",
+    "oldPrice": 48.49,
+    "newPrice": 39.99,
+    "oldPct": 3,
+    "newPct": 20,
+    "when": "Oct. 12, 2026 • 9:17 PM PT",
+    "day": "2026-10-12",
+    "minute": 1277,
+    "newSale": false,
+    "newLow": true,
+    "retailerChanged": true,
+    "note": "Scheels dropped the set to $39.99 from the prior $48.49 Target winner, improving the verified discount from 3% to 20% and establishing a new tracker-verified historical low. Available To Ship, free shipping, and a limit of 4 were verified. Retirement remains Dec. 31, 2026."
+  },
+  {
     "setno": "21356",
     "name": "River Steamboat",
     "theme": "Ideas",
@@ -17,7 +35,6 @@ window.PRICE_CHANGES=[
     "retailerChanged": true,
     "note": "Target started a new $19-off sale at $310.99, replacing the $329.99 Target / LEGO co-winner and improving the verified discount from 0% to 6%. In Stock and Add to cart were verified; the $230.99 tracker-verified historical low is preserved. Retirement remains Dec. 31, 2026."
   },
-
   {
     "setno": "43264",
     "name": "Toy Story Celebration Train & RC Car",
@@ -36,7 +53,6 @@ window.PRICE_CHANGES=[
     "retailerChanged": true,
     "note": "Target returned the set to $31.99 from $33.99, improving the verified discount from 15% to 20%. Add to cart and Sale Ends Monday were verified on today's Target listing; the price matches the Oct. 4 tracker-verified historical low. Target is now the sole reverified winner. Retirement remains Dec. 31, 2026."
   },
-
   {
     "setno": "43267",
     "name": "Princess Castle & Royal Pets",
@@ -55,7 +71,6 @@ window.PRICE_CHANGES=[
     "retailerChanged": false,
     "note": "Target dropped the set to $89.99 from $103.99, improving the verified discount from 20% to 31%. In Stock and Add to cart were verified; the $72.79 historical low is preserved. Retirement remains Dec. 31, 2026."
   },
-
   {
     "setno": "10353",
     "name": "Williams Racing FW14B & Nigel Mansell",
